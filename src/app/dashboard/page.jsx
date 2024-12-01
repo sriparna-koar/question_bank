@@ -64,24 +64,6 @@ export default function Dashboard() {
             ) : (
               <QuestionFormBulk />
             )}
-            <div className="mt-8">
-              {assessmentDetails && (
-                <button
-                  onClick={resetAll}
-                  className="w-full bg-red-600 text-white py-4 text-lg font-bold rounded-lg shadow-md hover:shadow-lg hover:bg-red-700 transition-all duration-300"
-                >
-                  Reset and Start Over
-                </button>
-              )}
-              {!assessmentDetails && mode && (
-                <button
-                  onClick={() => setMode("")}
-                  className="w-full bg-gray-500 text-white py-4 text-lg font-bold rounded-lg shadow-md hover:shadow-lg hover:bg-gray-600 transition-all duration-300"
-                >
-                  Back to Mode Selection
-                </button>
-              )}
-            </div>
           </div>
         </div>
       </div>

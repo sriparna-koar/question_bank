@@ -68,7 +68,7 @@ export default function AuthForm({ isSignup = false }) {
 
             <button
               type="submit"
-              className="w-full hover:from-indigo-600 text-black bg-blue-200 hover:to-purple-600 text-white py-3 rounded-lg shadow-lg text-black font-semibold tracking-wide uppercase transform transition duration-300"
+              className="w-full hover:from-indigo-600 text-black bg-blue-200 hover:to-purple-600 text-black py-3 rounded-lg shadow-lg text-black font-semibold tracking-wide uppercase transform transition duration-300"
             >
               {isSignup ? "Sign Up" : "Login"}
             </button>

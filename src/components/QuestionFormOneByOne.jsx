@@ -38,9 +38,9 @@ export default function QuestionFormOneByOne() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-6 bg-gradient-to-r from-blue-50 to-white shadow-xl rounded-lg max-w-lg mx-auto transition-all duration-300 hover:shadow-2xl border border-blue-200 transform hover:scale-105"
+      className="max-w-6xl mx-auto w-full p-6 bg-white shadow-xl rounded-lg max-w-lg mx-auto transition-all duration-300 hover:shadow-2xl border border-blue-200 transform"
     >
-      <h2 className="text-2xl font-bold text-gray-800 mb-5 text-center uppercase tracking-widest bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
+      <h2 className="text-2xl font-bold text-gray-800 mb-5 text-center uppercase tracking-widest bg-gradient-to-r from-black to-black text-transparent bg-clip-text">
         Add Your Question
       </h2>
       <div className="mb-4">
@@ -50,7 +50,7 @@ export default function QuestionFormOneByOne() {
         <textarea
           value={question.text}
           onChange={(e) => setQuestion({ ...question, text: e.target.value })}
-          className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg shadow focus:ring-2 focus:ring-blue-400 focus:outline-none bg-gray-50 resize-none"
+          className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg shadow bg-gray-50 resize-none"
           rows="2"
         ></textarea>
       </div>
@@ -68,13 +68,13 @@ export default function QuestionFormOneByOne() {
               value={option}
               onChange={(e) => handleOptionChange(index, e.target.value)}
               placeholder={`Option ${index + 1}`}
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:outline-none text-gray-700"
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none text-gray-700"
             />
             <input
               type="checkbox"
               checked={question.correct.includes(index)}
               onChange={() => toggleCorrectOption(index)}
-              className="h-4 w-4 text-purple-600 focus:ring-2 focus:ring-purple-400 border-gray-300 rounded"
+              className="h-4 w-4 text-black border-gray-300 rounded"
             />
           </div>
         ))}
